@@ -6,7 +6,7 @@ GRANT ALL PRIVILEGES ON DATABASE super_market_db TO postgres;
 CREATE TABLE public.categories
 (
     id integer NOT NULL PRIMARY KEY,
-    name varchar(30) NOT NULL,
+    name varchar(30) NOT NULL
 );
 
 ALTER TABLE public.categories
