@@ -1,6 +1,8 @@
 CREATE DATABASE super_market_db;
 GRANT ALL PRIVILEGES ON DATABASE super_market_db TO postgres;
 
+\c super_market_db;
+
 CREATE TABLE public.categories
 (
     id integer NOT NULL,
