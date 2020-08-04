@@ -5,9 +5,8 @@ GRANT ALL PRIVILEGES ON DATABASE super_market_db TO postgres;
 
 CREATE TABLE public.categories
 (
-    id integer NOT NULL,
+    id integer NOT NULL PRIMARY KEY,
     name varchar(30) NOT NULL,
-    CONSTRAINT categories_pkey PRIMARY KEY (id)
 );
 
 ALTER TABLE public.categories
@@ -15,12 +14,11 @@ ALTER TABLE public.categories
 
 CREATE TABLE public.products
 (
-    id integer NOT NULL,
+    id integer NOT NULL PRIMARY KEY,
     name varchar(50) NOT NULL,
     quantityinpackage smallint NOT NULL,
     unitofmeasurement smallint NOT NULL,
     categoryid integer NOT NULL,
-    CONSTRAINT products_pkey PRIMARY KEY (id),
     CONSTRAINT fk_category FOREIGN KEY (categoryid)
         REFERENCES public.categories (id) MATCH SIMPLE
         ON UPDATE NO ACTION
